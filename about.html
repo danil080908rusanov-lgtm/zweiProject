@@ -1,0 +1,151 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - Zwei</title>
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>Zwei</strong>
+                </a>
+                
+                <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+                                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">
+                        Главная
+                    </a>
+                    
+                    <a class="navbar-item" href="about.html">
+                        О компании
+                    </a>
+                    
+                    <a class="navbar-item" href="team.html">
+                        Команда
+                    </a>
+                    <a class="navbar-item is-active" href="blog.html">
+                        Новости
+                    </a>
+                    <a class="navbar-item is-active" href="contacts.html">
+                        Контакты
+                    </a>
+                </div>
+                
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-light">
+                                <strong>Войти</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-medium is-info">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <p class="title">
+                    О компании
+                </p>
+                <p class="subtitle">
+                    Узнайте больше о нашей миссии и ценностях
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="content">
+                        <h2 class="title is-2">Наша история</h2>
+                        <p>Zwei была основана в 2012 году с целью предоставления инновационных решений по кибербезопасности для бизнеса. За эти годы мы выросли из небольшого стартапа в ведущую компанию на рынке технологических услуг.</p>
+                        
+                        <h3 class="title is-3">Наша миссия</h3>
+                        <p>Мы стремимся помогать компаниям любого размера использовать современные технологии для повышения безопасности, улучшения клиентского опыта и достижения целей.</p>
+                        
+                        <h3 class="title is-3">Наши ценности</h3>
+                        <div class="columns is-multiline">
+                            <div class="column is-6">
+                                <div class="box">
+                                    <h4 class="title is-4"><i class="fas fa-lightbulb"></i> Инновации</h4>
+                                    <p>Мы постоянно ищем новые подходы и технологии для самых различных задач.</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="box">
+                                    <h4 class="title is-4"><i class="fas fa-users"></i> Сотрудничество</h4>
+                                    <p>Мы работаем в тесном партнерстве с нашими клиентами для достижения общих целей.</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="box">
+                                    <h4 class="title is-4"><i class="fas fa-shield-alt"></i> Надежность</h4>
+                                    <p>Мы гарантируем качество и безопасность наших решений.</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="box">
+                                    <h4 class="title is-4"><i class="fas fa-rocket"></i> Развитие</h4>
+                                    <p>Мы постоянно совершенствуем наши продукты и услуги.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Zwei</strong> &copy; 2025. Все права защищены.
+            </p>
+            <p>
+                <a href="index.html">Главная</a> | 
+                <a href="about.html">О компании</a> | 
+                <a href="team.html">Команда</a> | 
+                <a href="blog.html">Блог</a> | 
+                <a href="contacts.html">Контакты</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
